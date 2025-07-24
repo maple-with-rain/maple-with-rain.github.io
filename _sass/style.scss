@@ -1,0 +1,7 @@
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+.navbar { background:#24292e; padding:8px 16px; }
+.navbar a { color:#fff; margin-right:12px; text-decoration:none; }
+.wrapper { display:flex; height:calc(100vh - 40px); }
+aside { width:220px; border-right:1px solid #e1e4e8; overflow:auto; padding:12px; }
+main { flex:1; padding:16px; overflow:auto; }
+
