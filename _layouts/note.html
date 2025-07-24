@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/_sass/style.css' | relative_url }}">
+</head>   < / >负责人
+<body>   身体< >
+  {% include navbar.html %}
+  <section class="wrapper">
+    <aside>{% include sidebar.html %}</aside>
+    <main>
+      {% if page.content contains "<html>" %}
+        <!-- 如果是完整 html 直接嵌入 -->
+        {{ page.content }}
+      {% else %}
+        <!-- 如果是 markdown 就正常渲染 -->
+        {{ content }}
+      {% endif %}
+    </main>
+  </section>
+</body>   身体< / >
+</html>
+
