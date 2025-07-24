@@ -1,0 +1,20 @@
+<ul>
+  {% assign cats = site.pages | map: "categories" | compact | uniq %}{% assign cats = site.pages | map: "categories" | compact | uniq %}  这段代码是用于获取网站中所有页面的分类，并去除重复项。
+  {% for c in cats %}{%表示猫中c %}
+    <li><strong>{{ c }}</strong>{{ c }}  （由于原文中“{{ c }}”部分没有具体的内容，所以无法给出
+      <ul>
+      {% for p in site.pages %}{% for p in site.pages %}  这段代码是用于在 Jekyll 网站生成器中遍
+        {% if p.categories == c %}如果 p 的类别等于 c ，则：
+          <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>{{ p.title }}
+ 会被翻译成：
+
+
+{{ p.title }}
+ （原文为 HTML 
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+
