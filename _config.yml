@@ -1,0 +1,20 @@
+title: 我的笔记
+description: 托管在 GitHub Pages 的静态笔记本
+baseurl: ""
+url: "https://用户名.github.io"
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+collections:
+  notes:
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      path: "notes"
+      type: "notes"
+    values:
+      layout: "note"
+
