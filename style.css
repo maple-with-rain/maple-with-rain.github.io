@@ -1,0 +1,67 @@
+/*总体样式*/
+*{
+    color: rgb(255, 255, 255);
+}
+html{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgba(4, 101, 247, 0.7);
+    background-image: url("pictures/wallhaven-1pd5vw.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*文本样式*/
+h1{
+    /*字体*/
+    font-family: "草书", KaiTi, "KaiTi_GB2312", serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #751492;
+    text-align: center;
+    margin-top: 30px;
+}
+p{
+    text-indent: 2em;
+    font-family: "楷体", KaiTi, "KaiTi_GB2312", serif;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6em;
+    margin-top: 10px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*超链接样式*/
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+a:hover{
+    color: rgba(4, 101, 247, 0.7);
+}
+
+/*表格样式*/
+table{
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: none;
+}
+/*窗口样式*/
+.box{
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
