@@ -8,7 +8,6 @@
      width: 220px;
      /* 根据需要自行调整 */
      background: #2c3e50;
-     background-image: url("../pictures/wallhaven-1pd5vw.png");
      color: #fff;
      transform: translateX(-100%);
      text-align: center;
@@ -17,6 +16,7 @@
      z-index: 9999;
      overflow-y: auto;
      /* 内容过长时可滚动 */
+     animation: change-color 10s ease-in-out infinite;
  }
 
  /* 3. 列表样式 */
@@ -39,7 +39,7 @@
      padding: .9rem 1.5rem;
      color: #ecf0f1;
      text-decoration: none;
-     transition: background .2s;
+     transition: background 0.1s;
  }
 
  .sidebar a:hover {
@@ -72,16 +72,18 @@
  
  /*展开按键*/
  .toggle-button {
+    overflow: hidden;
+    text-align: center;
      position: fixed;
      top: 20px;
      left: 20px;
      z-index: 9999;
      background: rgba(255, 255, 255, 0.8);
      border: none;
-     border-radius: 5px;
+     border-radius: 10px;
      padding: 10px 15px;
      cursor: pointer;
-     transition: background 0.2s;
+     transition: background 1s;
  }
 
  .toggle-button:hover {
