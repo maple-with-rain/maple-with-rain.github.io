@@ -10,7 +10,7 @@ html {
     margin: 0;
     padding: 0;
     background: rgba(4, 101, 247, 0.7);
-    background-image: url("pictures/wallhaven-1pd5vw.png");
+    background-image: url("../pictures/wallhaven-1pd5vw.png");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -75,36 +75,19 @@ table {
     height: auto;
     border-radius: 10px;
     margin-top: 10px;
-    float: left;
 }
-.picturebox {
+.picture {
     display: flex;
-    width: 50%;
-    flex-direction: column;
-    justify-content: center;
+    width: 48%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    float: inline-start;
+    margin: 1% 1%;
+    border-radius: 10px;
+    margin-top: 10px;
 }
-.picturebox a img:hover{
+.picture a img:hover{
     transform: scale(1.1);
-    
 }
 
-/*侧边栏样式*/
-.sidebar {
-    width: 250px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    float: left;
-}
-.sidebar h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-.sidebar li {
-    margin-bottom: 5px;
-}
