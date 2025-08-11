@@ -72,6 +72,7 @@
  
  /*展开按键*/
  .toggle-button {
+    vertical-align: bottom;
     overflow: hidden;
     text-align: center;
      position: fixed;
@@ -81,9 +82,11 @@
      background: rgba(255, 255, 255, 0.8);
      border: none;
      border-radius: 10px;
-     padding: 10px 15px;
+     padding: 0% 0%;
      cursor: pointer;
      transition: background 1s;
+        width: 40px;
+        height: 40px;
  }
 
  .toggle-button:hover {
@@ -94,3 +97,13 @@
  .sidebar:hover {
      transform: translateX(0);
  }
+
+.mulu-set {
+  font-family: "iconfont" !important;
+  font-size: 30px;
+  font-style: normal;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black
+}
