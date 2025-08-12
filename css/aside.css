@@ -107,3 +107,8 @@
   -moz-osx-font-smoothing: grayscale;
   color: black
 }
+
+.toggle-button:active body,
+{
+    animation: change-size-of-page 10s ease-in-out infinite;
+}

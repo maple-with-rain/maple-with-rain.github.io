@@ -25,6 +25,13 @@
       "font_class": "mulu",
       "unicode": "e890",
       "unicode_decimal": 59536
+    },
+    {
+      "icon_id": "16217175",
+      "name": "枫叶",
+      "font_class": "fengye",
+      "unicode": "e501",
+      "unicode_decimal": 58625
     }
   ]
 }
