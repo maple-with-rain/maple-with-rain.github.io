@@ -12,4 +12,7 @@ private:
     std::vector<std::vector<double>> data;
     size_t rows;
     size_t cols;
-}
+public:
+    Martix() : rows(0), cols(0) {}
+    
+};
