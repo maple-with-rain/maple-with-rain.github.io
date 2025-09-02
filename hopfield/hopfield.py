@@ -3,11 +3,17 @@ import matplotlib.pyplot as plt
 import imageio.v2 as imageio
 from pathlib import Path
 import random
-N = 10 ###最终状态组数
+N = 2 ###最终状态组数
 Length = 6
 Width = 6
 M = Length * Width ###图像维数
-b = -0.072 ###偏置项
+b = np.zeros((M,M)) ###阈值函数
+
+def sigma(x):
+    if x >= 0:
+        return 1
+    else:
+        return -1
 
 def creat_pictures(flattened_data , num):
     picture_path = "pictures/"
@@ -117,12 +123,12 @@ digit_patterns = {
 ###😡6*6矩阵
 
 unknown_num = patt_from_strings([
-        "######",
-        "#....#",
-        "#....#",
-        "#....#",
-        "#....#",
-        "######",
+        "####..",
+        "....#.",
+        "..###.",
+        "....#.",
+        "....#.",
+        "####..",
     ])
 ###这里是我们随便定义的一个数字图像
 
@@ -136,33 +142,31 @@ def training(datas):
         for j in range(0,M):
             for mu in range(0,N):
                 w[i][j] = datas[mu][i] * datas[mu][j] + w[i][j]
-            w[i][j] = w[i][j] / M
+    w = w / N
     for i in range(0,M):
         w[i][i] = 0
     return w
 ###训练，返回权值函数
 ###datas为结果构成的数组
 
-def computing(data , time = 0 ):
+def computing(data , w , time = 0 ):
     ###算了，不写随机了，感觉好麻烦
-    new_data = []
+    new_data = data.copy()
     creat_pictures(data , time)
     for i in range(0,M):
         for j in range(0,M):
-            ans = w[i][j]*data[j] + w[i][j]
-            if ans >= 0:
-                new_data.append(1)
-            else:
-                new_data.append(-1) 
-
-    if if_change(new_data , data):
-        computing(new_data , time + 1)
+            ans = w[i][j]*data[j] + w[i][j] + b[i][j] 
+        new_data[i] = sigma(ans)
+        time = time + 1
+        creat_pictures(new_data , time)
+    if if_change(new_data , data): 
+        computing(new_data , w , time + 1)
 
 ###打印结果
 if __name__ == "__main__":
     digits = [digit_patterns[i].flatten() for i in range(0,N)]
     w = training(digits)
-    computing(unknown_num.flatten())
+    computing(unknown_num.flatten() , w)
 
     ###print(w)
 ###🤔这玩意应该还算好拓展吧🤔
